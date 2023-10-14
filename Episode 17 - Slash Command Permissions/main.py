@@ -30,8 +30,8 @@ def my_check(interaction: discord.Interaction):
 # Command used for testing
 #
 @client.tree.command(name="test")
-@app_commands.checks.bot_has_permissions(Administrator=True) # Will return True if bot has Administrator perms (Accepts any permission & can be True/False)
-@app_commands.checks.has_permissions(Administrator=True) # Will return True if user has Administator perms (Accepts any permission & can be True/False)
+@app_commands.checks.bot_has_permissions(administrator=True) # Will return True if bot has Administrator perms (Accepts any permission & can be True/False)
+@app_commands.checks.has_permissions(administrator=True) # Will return True if user has Administator perms (Accepts any permission & can be True/False)
 @app_commands.checks.has_role("Admin") # Will return True if user has a role by the name of Admin (Accepts role names or IDs)
 @app_commands.checks.has_any_role([918333581758193694, 680584954136100890, 680586241787691021]) # Will return True if the user has any of the roles with the IDs listed (Accepts role names or IDs)
 @app_commands.checks.cooldown(1, 5.0) # Can only run the command once every 5.0 seconds. For hours, minutes, days, etc, just convert to seconds
